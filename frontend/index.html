@@ -4,11 +4,56 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="article blog posting" />
+    <meta
+      name="description"
+      content="An aritlce blog where you can freely post articles"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>Article Blog</title>
   </head>
   <body>
-    <h1>Hello World</h1>
+    <h1>Article Blog</h1>
+    <div id="create-article-container">
+      <h2>Create your article</h2>
+      <label for="title">Title</label>
+      <input type="text" name="title" id="title-input" />
+      <label for="content">Article content</label>
+      <button id="post-button">Post</button>
+      <textarea
+        name="content"
+        id="content-input"
+        cols="80"
+        rows="20"
+      ></textarea>
+    </div>
+    <div id="navigation-box">
+      <ul id="article-fragments">
+        <li><a href="#article-board">some title</a></li>
+      </ul>
+    </div>
+    <div id="article-board">
+      <div class="article">
+        <button>Delete</button>
+        <h2>Example Title</h2>
+        <p>
+          Example content Lorem ipsum dolor sit amet consectetur adipisicing
+          elit. Voluptatem, excepturi molestiae aut ut reiciendis odit
+          accusantium ipsum dolorem provident quas quasi culpa ex distinctio
+          expedita! Perspiciatis saepe iusto unde similique? Lorem ipsum dolor
+          sit amet consectetur adipisicing elit. Harum assumenda nostrum
+          voluptatum sed velit eum praesentium voluptatibus ex natus, beatae,
+          quo eligendi, dolores iure similique labore deleniti? Ullam,
+          distinctio autem! Lorem ipsum dolor sit, amet consectetur adipisicing
+          elit. Neque quibusdam ab excepturi eaque, recusandae doloribus,
+          consectetur nulla ipsam iusto temporibus quis omnis! Accusantium nobis
+          cupiditate, odio autem ullam vitae laborum? Lorem ipsum dolor sit amet
+          consectetur adipisicing elit. Harum accusamus sed, quae consectetur
+          doloribus sunt? Illo animi dolorem, aliquid, adipisci esse nulla dolor
+          quidem, officia non pariatur cumque eius nostrum?
+        </p>
+      </div>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
