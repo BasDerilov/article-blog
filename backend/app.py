@@ -1,7 +1,9 @@
 from flask import Flask, jsonify, request, Response
+from flask_cors import CORS
 import services
 
 app = Flask(__name__)
+CORS(app)
 
 @app.route('/Articles', methods=["GET"])
 def get_all_articles():
@@ -25,9 +27,9 @@ def create_article():
     result = services.create_new_article(args['title'], args['content'])
     
     if result:
-        return Response(f"Created article {args['title']}", status=200)
+        return Response(f"Created article {args['title']}", status=200, mimetype='json')
     else:
-        return Response(f"Article with the same name already exists!", status=400)
+        return Response(f"Article with the same name already exists!", status=400, mimetype='json')
         
 
 @app.route('/Articles', methods=['DELETE'])
@@ -36,7 +38,7 @@ def delete_article():
     result = services.delete_article(args['title'])
     
     if result:
-        return Response(f"Article {args['title']} was removed succesfully", status=200)
+        return Response(f"Article {args['title']} was removed succesfully", status=200, mimetype='json')
     else:
-        return Response(f"Article {args['title']} not found", status=400)
+        return Response(f"Article {args['title']} not found", status=400, mimetype='json')
 
